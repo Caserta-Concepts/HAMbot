@@ -1,11 +1,11 @@
 import ConfigParser
 import os
 import sys
-import importlib
 import logging
 import argparse
-from flask import Flask, Response
-from flask import request
+import datetime
+from flask import Flask
+
 
 
 #------------------------------------------------------------------------
@@ -16,6 +16,11 @@ app.debug = True
 
 #------------------------------------------------------------------------
 #utils
+
+#logging wrapper:
+log_name = datetime.datetime.now().strftime("hambot-%Y%m%d-%H%M%S.log")
+logging.basicConfig(filename=log_name,level=logging.DEBUG, format='%(asctime)s %(message)s',filmode='w')
+
 def log(message):
     logging.info(message)
     print(message)
