@@ -11,7 +11,7 @@ A core set of services that allows the automation of data quality checks:
 * Trap, log and alert assertions
 * Checks will be compared against thresholds (each check can have multiple thresholds)
 * These thresholds can trigger different alert types  (log alert level, sms)
-* Data quality steps will be written in python (at least initially)
+* Data quality steps will be written in python or SQL (at least initially)
 
 ##Data Model:    
 
